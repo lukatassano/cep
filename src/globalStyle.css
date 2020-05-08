@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #000 url('./assets/map.jpg') no-repeat;
+  background-color: #999;
+  background-size: cover;
+  -webkit-font-smoothing: antialiased !important;
+}
+
+.container {
+  margin: 80px auto 0;
+  margin-bottom: 90px;
+  max-width: 60%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
