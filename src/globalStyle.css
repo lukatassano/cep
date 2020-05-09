@@ -6,8 +6,7 @@
 }
 
 body {
-  background: #000 url('./assets/map.jpg') no-repeat;
-  background-color: #999;
+  background: url(./assets/map.jpg);
   background-size: cover;
   -webkit-font-smoothing: antialiased !important;
 }
