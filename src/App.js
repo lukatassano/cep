@@ -1,5 +1,5 @@
-import React, {useState} from 'react';
-import {Container} from './styles';
+import React, { useState } from 'react';
+import { Container } from './styles';
 import serverCep from 'cep-promise';
 
 function App() {
@@ -10,9 +10,6 @@ function App() {
   async function handleVerify(cep) {
     try {
       const response = serverCep(cep)
-        .then(function () {
-          setResponseCep(response)
-        })
     } catch (err) {
       alert(err)
     }
@@ -23,7 +20,7 @@ function App() {
     <>
       <Container className="container">
         <div className="input-div">
-          <input className="input-cep" placeholder="CEP" onChange={event => setCep(event.target.value)}/>
+          <input className="input-cep" placeholder="CEP" onChange={event => setCep(event.target.value)} />
           <button className="btn" onClick={() => handleVerify()}>
             Buscar
           </button>

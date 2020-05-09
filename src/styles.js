@@ -1,5 +1,4 @@
-import styled, {keyframes} from 'styled-components'
-import satellite from './assets/satellite.svg'
+import styled from 'styled-components'
 
 export const Container = styled.div`
   display: flex;
