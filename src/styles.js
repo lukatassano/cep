@@ -1,24 +1,25 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 export const Container = styled.div`
   display: flex;
-  height: 60vh;
-  background-color: rgba(255,255,255, 0.45);
+  padding: 60px 50px;
+  width: 90%;
+  max-width: 500px;
+  height: 60%;
+  background-color: rgba(255, 255, 255, 0.45);
   border-radius: 20px;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 
-  img {
-    height: 100px;
-  }
-
-  .input-div{
+  .input-div {
+    display: flex;
     background-color: #fff;
     border-radius: 20px;
-    display: flex;
+    width: 100%;
     align-self: center;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
   }
 
   input {
@@ -27,11 +28,10 @@ export const Container = styled.div`
     background-color: rgba(255, 255, 255, 0.8);
     border: 0px;
     height: 40px;
-    width: 300px;
+    width: 70%;
     font-size: 22px;
     text-align: center;
   }
-
 
   .btn {
     width: 100px;
@@ -45,26 +45,21 @@ export const Container = styled.div`
     cursor: pointer;
     transition: opacity 0.2s;
 
-    &:hover{
+    &:hover {
       opacity: 70%;
     }
   }
 
   .response {
+    padding-left: 20px;
     margin-top: 30px;
     display: flex;
     flex-direction: column;
     border-radius: 20px;
     height: 200px;
-    width: 400px;
+    width: 100%;
     background-color: rgba(0, 0, 0, 0.4);
-    align-items: center;
     justify-content: center;
-    transition: width 0.2s;
-
-    &:hover{
-      width: 420px;
-    }
   }
 
   p {
@@ -73,4 +68,4 @@ export const Container = styled.div`
     font-size: 20px;
     font-weight: bold;
   }
-`
+`;

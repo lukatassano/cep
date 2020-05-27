@@ -1,35 +1,40 @@
-import React, { useState } from 'react';
-import { Container } from './styles';
-import serverCep from 'cep-promise';
+import React, { useState } from "react";
+import { Container } from "./styles";
+import serverCep from "cep-promise";
 
 function App() {
-  const [cep, setCep] = useState('');
-  const [responseCep, setResponseCep] = useState();
+  const [cep, setCep] = useState("");
+  const [responseCep, setResponseCep] = useState("");
 
+  async function handleVerify(event) {
+    const response = await serverCep(cep);
+    console.log(response);
 
-  async function handleVerify(cep) {
-    try {
-      const response = serverCep(cep)
-    } catch (err) {
-      alert(err)
-    }
-    return
+    setResponseCep(response);
   }
 
   return (
-    <>
+    <body>
       <Container className="container">
         <div className="input-div">
-          <input className="input-cep" placeholder="CEP" onChange={event => setCep(event.target.value)} />
+          <input
+            className="input-cep"
+            placeholder="CEP"
+            type="text"
+            onChange={(event) => setCep(event.target.value)}
+          />
           <button className="btn" onClick={() => handleVerify()}>
             Buscar
           </button>
         </div>
         <div className="response">
-          <h1>{responseCep}</h1>
+          <p>{responseCep.state}</p>
+          <p>{responseCep.city}</p>
+          <p>{responseCep.neighborhood}</p>
+          <p>{responseCep.street}</p>
         </div>
       </Container>
-    </>
+    </body>
   );
 }
 
