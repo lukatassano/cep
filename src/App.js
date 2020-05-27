@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import AdSense from "react-adsense";
+import AdSense from "react-adsense-ad";
 import { Container } from "./styles";
 import serverCep from "cep-promise";
 
