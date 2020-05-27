@@ -16,16 +16,15 @@ function App() {
 
   return (
     <body>
+      <AdSense.Google client="Your Publisher Id" slot="Ad slot Id" />
+
+      <AdSense.Google
+        client="Your Publisher Id"
+        slot="Ad slot Id"
+        style={{ width: 500, height: 300, float: "left" }}
+        format=""
+      />
       <Container className="container">
-        <AdSense.Google client="Your Publisher Id" slot="Ad slot Id" />
-
-        <AdSense.Google
-          client="Your Publisher Id"
-          slot="Ad slot Id"
-          style={{ width: 500, height: 300, float: "left" }}
-          format=""
-        />
-
         <div className="input-div">
           <input
             className="input-cep"
