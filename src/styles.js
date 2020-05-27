@@ -1,5 +1,17 @@
 import styled from "styled-components";
 
+export const Ad = styled.head`
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  script {
+    width: 200px;
+    height: 100px;
+  }
+`;
+
 export const Container = styled.div`
   display: flex;
   padding: 60px 50px;
