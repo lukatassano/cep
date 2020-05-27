@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Container, Ad } from "./styles";
+import { Container } from "./styles";
 import serverCep from "cep-promise";
 
 function App() {
@@ -15,13 +15,6 @@ function App() {
 
   return (
     <body>
-      <Ad>
-        <script
-          data-ad-client="ca-pub-2074115776265097"
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
-        ></script>
-      </Ad>
       <Container className="container">
         <div className="input-div">
           <input
