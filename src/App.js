@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import AdSense from "react-adsense-ad";
-import { Container } from "./styles";
+import AdSense from "react-adsense";
+import { Container, Ad } from "./styles";
 import serverCep from "cep-promise";
 
 function App() {
@@ -15,15 +15,11 @@ function App() {
   }
 
   return (
-    <body>
-      <AdSense.Google client="Your Publisher Id" slot="Ad slot Id" />
+    <>
+      <Ad>
+        <AdSense.Google client="ca-pub-2074115776265097" slot="1297261620" />
+      </Ad>
 
-      <AdSense.Google
-        client="Your Publisher Id"
-        slot="Ad slot Id"
-        style={{ width: 500, height: 300, float: "left" }}
-        format=""
-      />
       <Container className="container">
         <div className="input-div">
           <input
@@ -43,7 +39,7 @@ function App() {
           <p>{responseCep.street}</p>
         </div>
       </Container>
-    </body>
+    </>
   );
 }
 

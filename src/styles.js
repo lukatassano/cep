@@ -1,11 +1,21 @@
 import styled from "styled-components";
 
+export const Ad = styled.div`
+  display: flex;
+  height: 20%;
+  width: 90%;
+  margin: 20px;
+  z-index: 20;
+  cursor: pointer;
+`;
+
 export const Container = styled.div`
   display: flex;
   padding: 60px 50px;
   width: 90%;
+  margin-left: 20px;
   max-width: 500px;
-  height: 60%;
+  height: 100%;
   background-color: rgba(255, 255, 255, 0.45);
   border-radius: 20px;
   flex-direction: column;
@@ -35,7 +45,7 @@ export const Container = styled.div`
 
   .btn {
     width: 100px;
-    background-color: rgba(255, 0, 0, 0.8);
+    background-color: rgb(76, 183, 187);
     font-weight: bold;
     font-size: 15px;
     color: #fff;
